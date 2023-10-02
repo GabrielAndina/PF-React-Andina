@@ -1,36 +1,22 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget  from '../CartWidget/CartWidget';
+import { NavLink, Link } from 'react-router-dom';
+import './NavBar.css';
 
-function NavBar() {
+
+const NavBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Pumas Store</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Shop</Nav.Link>
-            <Nav.Link href="#link">Nosotros</Nav.Link>
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Camisetas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Shorts
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Ropa de Invierno</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Nike Store
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
+    <nav className='NavBar'>
+      <Link to='/'>
+        <h3>Pumas Store</h3>
+      </Link>
+      <div className='Categories'>
+        <NavLink to={`/category/camisetas`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Camisetas</NavLink>
+        <NavLink to={`/category/shorts`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Shorts</NavLink>
+        <NavLink to={`/category/otros`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Otra Indumentaria</NavLink>
+      </div>
       <CartWidget />
-      </Container>
-    </Navbar>
-  );
+    </nav>
+  )
 }
 
 export default NavBar;

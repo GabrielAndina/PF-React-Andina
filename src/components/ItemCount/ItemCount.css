@@ -1,0 +1,54 @@
+/* Estilos para el componente ItemCount */
+.Counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .Controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .Button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+  }
+  
+  .Button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Number {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Estilo para el botón "Agregar al carrito" */
+  .AddToCartButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .AddToCartButton:disabled {
+    background-color: #a80909;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,7 @@
+.ItemDetailContainer{
+    display: flex; /* Acomodar los elementos horizontalmente */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos si es necesario */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias filas si es necesario */
+    gap: 20px; /* Espacio entre los elementos */
+}
