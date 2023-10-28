@@ -1,22 +1,18 @@
-/* Estilo blanco para el CartWidget */
 .CartWidget {
-    color: white; /* Color blanco para el contenido del carrito */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   
-  /* Estilo para el icono de carrito */
   .CartWidget img {
-    width: 100px;
-    height: 100px;
-    filter: brightness(0) invert(1); /* Invertir el icono para que sea blanco */
-    margin-bottom: 5px; /* Espacio entre el icono y el número */
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1); 
+    margin-bottom: 5px; 
   }
   
-  /* Estilo para el número de elementos en el carrito */
   .CartWidget span {
-    font-weight: bold; /* Opcional: hacer el número en negrita */
+    font-weight: bold; 
   }
   
